@@ -1,4 +1,7 @@
+// ignore_for_file: sized_box_for_whitespace
+
 import 'package:flutter/material.dart';
+import 'package:iconsax/iconsax.dart';
 
 void main() {
   runApp(const LabClass05());
@@ -17,19 +20,22 @@ class LabClass05 extends StatelessWidget {
             backgroundColor: Colors.blue,
             centerTitle: true,
           ),
-          body: Container(
-            height: double.infinity,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Icon(Icons.contact_emergency,
-                    size: 50, color: const Color.fromARGB(210, 0, 68, 255)),
-                Icon(Icons.home,
-                    size: 50, color: const Color.fromARGB(210, 255, 0, 0)),
-                Icon(Icons.map,
-                    size: 50, color: const Color.fromARGB(210, 0, 255, 72)),
-              ],
+          body: SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Container(
+              height: 600,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: List.generate(
+                  100,
+                  (index) => Icon(
+                    Iconsax.activity,
+                    size: index.toDouble(),
+                    color: const Color.fromARGB(255, 255, 10, 10),
+                  ),
+                ),
+              ),
             ),
           ),
         ));
