@@ -13,31 +13,57 @@ class LabClass05 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: 'Basic Flutter UI 02',
-        home: Scaffold(
-          appBar: AppBar(
-            title: Text("Basic Flutter"),
-            backgroundColor: Colors.blue,
-            centerTitle: true,
-          ),
-          body: SingleChildScrollView(
-            scrollDirection: Axis.horizontal,
-            child: Container(
-              height: 600,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: List.generate(
-                  100,
-                  (index) => Icon(
-                    Iconsax.activity,
-                    size: index.toDouble(),
-                    color: const Color.fromARGB(255, 255, 10, 10),
-                  ),
+      title: 'Basic Flutter UI 02',
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text("Basic Flutter"),
+          backgroundColor: Colors.blue,
+          centerTitle: true,
+        ),
+        body: Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Icon(Iconsax.lovely,
+                size: 40, color: const Color.fromARGB(255, 255, 0, 0)),
+            Icon(Iconsax.lovely,
+                size: 40, color: const Color.fromARGB(255, 255, 0, 0)),
+            Icon(Iconsax.lovely,
+                size: 40, color: const Color.fromARGB(255, 255, 0, 0)),
+            Icon(Iconsax.lovely,
+                size: 40, color: const Color.fromARGB(255, 255, 0, 0)),
+            Icon(Iconsax.lovely,
+                size: 40, color: const Color.fromARGB(255, 255, 0, 0)),
+            Column(
+              children: [
+                Icon(Iconsax.lovely,
+                    size: 40, color: const Color.fromARGB(255, 0, 255, 26)),
+                Icon(Iconsax.lovely,
+                    size: 40, color: const Color.fromARGB(255, 0, 255, 26)),
+                Icon(Iconsax.lovely,
+                    size: 40, color: const Color.fromARGB(255, 0, 255, 26)),
+                Icon(Iconsax.lovely,
+                    size: 40, color: const Color.fromARGB(255, 0, 255, 26)),
+                Icon(Iconsax.lovely,
+                    size: 40, color: const Color.fromARGB(255, 0, 255, 26)),
+                Row(
+                  children: [
+                    Icon(Iconsax.lovely,
+                        size: 40, color: const Color.fromARGB(255, 255, 0, 0)),
+                    Icon(Iconsax.lovely,
+                        size: 40, color: const Color.fromARGB(255, 255, 0, 0)),
+                    Icon(Iconsax.lovely,
+                        size: 40, color: const Color.fromARGB(255, 255, 0, 0)),
+                    Icon(Iconsax.lovely,
+                        size: 40, color: const Color.fromARGB(255, 255, 0, 0)),
+                    Icon(Iconsax.lovely,
+                        size: 40, color: const Color.fromARGB(255, 255, 0, 0)),
+                  ],
                 ),
-              ),
-            ),
-          ),
-        ));
+              ],
+            )
+          ],
+        ),
+      ),
+    );
   }
 }
